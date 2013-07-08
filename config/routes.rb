@@ -1,5 +1,7 @@
 Vcruit::Application.routes.draw do
 
+  resources :video_pages
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   
 	root :to => 'static_pages#home'	
