@@ -1,0 +1,45 @@
+<header>
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name"><h1><%= link_to "vCruit",   root_path %></h1></li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li><%= link_to "About",   about_path %></li>
+      <li class="divider"></li>
+	  <li><%= link_to "Contact",   contact_path %></li>
+      <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+	<ul class="right">
+      <% if user_signed_in? %>
+	    <li class="divider hide-for-small"></li>
+        <li class="has-dropdown"><%= link_to current_user.email, "#{}" %>
+		
+		<ul class="dropdown">
+	        <li class="divider"></li>
+	  	  	<li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+	        <li class="divider"></li>
+	  	  	<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+	        <li class="divider"></li>
+		</ul></li>
+		  <% else %>
+	        <li class="divider hide-for-small"></li>
+	        <li class="has-dropdown"><%= link_to "Login", new_user_session_path %>
+		
+	      <ul class="dropdown">  
+		  	<li><%= link_to "Sign up", new_user_registration_path %></li>
+	        <li class="divider"></li></ul></li>
+		  <% end %>
+		  
+    </ul>
+  </section>
+</nav>
+</header>
