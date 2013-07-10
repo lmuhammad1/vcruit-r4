@@ -1,4 +1,5 @@
 class VideoPagesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_video_page, only: [:show, :edit, :update, :destroy]
 
   # GET /video_pages

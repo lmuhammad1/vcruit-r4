@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_one :profile
+  has_one :profile, autosave: true
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
