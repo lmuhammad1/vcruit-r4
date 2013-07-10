@@ -26,6 +26,7 @@ class VideoPagesController < ApplicationController
   # POST /video_pages.json
   def create
     @video_page = VideoPage.new(video_page_params)
+    @video_page.profile = current_user_profile
 
     respond_to do |format|
       if @video_page.save
