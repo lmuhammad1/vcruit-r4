@@ -1,1 +1,8 @@
 <h1>Home Page</h1>
+
+<% if current_user_profile %>
+	<h3><%= current_user_profile.first_name %></h3>
+	<h3><%= current_user_profile.last_name %></h3>
+<% else %>
+	<h3>First create an account and then create a profile</h3>
+<% end %>
