@@ -21,7 +21,7 @@
 	<ul class="right">
       <% if user_signed_in? %>
 	    <li class="divider hide-for-small"></li>
-        <li class="has-dropdown"><%= link_to current_user.email, "#{}" %>
+        <li class="has-dropdown"><%= link_to current_user_profile.nil? ? current_user.email : login_name, "#{}" %>
 		
 		<ul class="dropdown">
 	        <li class="divider"></li>
