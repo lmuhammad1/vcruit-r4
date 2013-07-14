@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vcruit</title>
+  <title>Sample</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+<body>
 
+		<div class="containter">
+			<div class="row">
+			
+		  <%= render 'layouts/header' %>
+			<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, id: "flash_#{name}" %>
+			<% end %>
 
-  <body>
-	  <div class="wrapper">
-	  <%= render 'layouts/header' %>
-  	  <% flash.each do |name, msg| %>
-  	    <%= content_tag :div, msg, id: "flash_#{name}" %>
-  	<div id="container">
-  	  
-  	  <% end %>
-
-  	  <%= yield %>
-  	</div>
-    <%= javascript_include_tag "application" %>
-</div>
-  </body>
+	  	  <%= yield %>
+			
+		</div>
+	</div>
+</body>
 </html>

@@ -1,8 +1,263 @@
-<h1>Home Page</h1>
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "slide-01.jpg" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Watch a demo</h1>
+          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <button class="btn btn-large btn-primary" href="#">Sign up today</button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+			<%= image_tag "slide-02.jpg" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>See how it works.</h1>
+          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <button class="btn btn-large btn-primary" href="#">Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag "slide-03.jpg" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Start for free</h1>
+          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <button class="btn btn-large btn-primary" href="#">Start for free</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
 
-<% if current_user_profile %>
-	<h3><%= current_user_profile.first_name %></h3>
-	<h3><%= current_user_profile.last_name %></h3>
-<% else %>
-	<h3>First create an account and then create a profile</h3>
-<% end %>
+<!-- Action Buttons
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<!-- <div class="action-buttons">
+	<div class="row">
+			<button class="btn btn-large btn-primary" type="button">Watch a Demo</button>
+			<button class="btn btn-large btn-primary" type="button">Start for Free</button>
+	</div>
+</div> -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- Four columns of text below the carousel -->
+  <div class="section-3">
+		<div class="row">
+			<h2 class="featurette-heading">What is vCruit? <span class="muted">It'll blow your mind.</span></h2>
+			<p class="lead">vCruit is a web-based application that enables recruiters to utilize the power of online video to get and keep the attention of candidates and clients. It's an easy to use application that works like this:</p>
+		</div>
+	</div>
+	<div class="row">
+    <div class="span3">
+      <h2 class="featurette-numbering">1</h2>
+      <p class="lead">Create a video that showcases your message and upload it to the vCruit application.</p>
+    </div><!-- /.span3 -->
+    <div class="span3">
+      <h2 class="featurette-numbering">2</h2>
+      <p class="lead">Host the video on a custom landing page designed and branded just for you.</p>
+    </div><!-- /.span3 -->
+    <div class="span3">
+      <h2 class="featurette-numbering">3</h2>
+      <p class="lead">Embed the video into your emails, InMails, and social media posts.</p>
+    </div><!-- /.span3 -->
+    <div class="span3">
+      <h2 class="featurette-numbering">4</h2>
+      <p class="lead">Track analytics to see who watches the video, how many times, and for how long.</p>
+    </div><!-- /.span3 -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+
+  <!-- START THE FEATURETTES -->
+<div id="bg-color-orange">
+	<div class="container marketing">
+		<div class="section-3">
+		<div class="row">
+		  <div class="featurette">
+		    <h2 class="featurette-heading">Does this sound familiar?</h2>
+		    <div class="row">
+					<div class="span5 offset1">
+			      <i class="icon-arrow-right"></i>
+			      <p class="lead">"I would like to have more passive candidates respond to my phone calls, emails, and InMails with interest"</p>
+			    </div><!-- /.span3 -->
+					<div class="span5">
+			      <i class="icon-arrow-right"></i>
+			      <p class="lead">"I would like my LinkedIn and other social media posts to reach a larger audience and generate more inbound leads"</p>
+			    </div><!-- /.span3 -->
+				</div>
+				
+		    <div class="row">
+					<div class="span5 offset1">
+			      <i class="icon-arrow-right"></i>
+			      <p class="lead">"I would like to have more companies respond to my phone calls, emails, and InMails with interest"</p>
+			    </div><!-- /.span3 -->
+					<div class="span5">
+			      <i class="icon-arrow-right"></i>
+			      <p class="lead">"Candidates and clients are busy and they get a lot of messages from recruiters. It's really hard to stand out and get their attention."</p>
+			    </div><!-- /.span3 -->
+				</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+  <!-- /END THE FEATURETTES -->
+	
+	
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+
+	  <!-- Four columns of text below the carousel -->
+	  <div class="section-4">
+			<div class="row">
+				<h2 class="featurette-heading" id="special-header-blue">Why vCruit and online video can help . . . </h2>
+			</div>
+		</div>
+		<div class="row">
+	    <div class="span12">
+				<div class="section-4">
+	      <h2 id="special-header-orange">Video gets more people's attention</h2>
+				<p class="lead"><i class="icon-stop"></i>Online video delivers 10 times the response rate of static text and graphics. ~ double click</p>
+				<p class="lead"><i class="icon-stop"></i>Click rates for email campaigns increased by more than 300% when the email included a video. ~ Wistia</p>
+			</div>
+		</div>
+	    </div><!-- /.span3 -->
+			<div class="row">
+		    <div class="span12">
+					<div class="section-4">
+		      <h2 id="special-header-orange">Viewers are more likely to sit through your message in a video</h2>
+					<p class="lead"><i class="icon-stop"></i>Buyers are 98% more likely to watch a presentation on video than to listen to a sales rep. ~ Forrester Research</p>
+					<p class="lead"><i class="icon-stop"></i>85% of people choose to watch a video about a company online rather than read the rest of the website. ~ Forrester Research</p>
+				</div>
+			</div>
+		    </div><!-- /.span3 -->
+				<div class="row">
+			    <div class="span12">
+						<div class="section-4">
+			      <h2 id="special-header-orange">Video boost social media engagement</h2>
+						<p class="lead"><i class="icon-stop"></i>People are most likely to engage with branded content on social media that contains pictures (44%) and videos (37%). ~ Performics</p>
+					</div>
+				</div>
+			    </div><!-- /.span3 -->
+					<div class="row">
+				    <div class="span12">
+							<div class="section-4">
+				      <h2 id="special-header-orange">Video helps to build familiarity</h2>
+							<p class="lead"><i class="icon-stop"></i>Seeing someone's eyes and hearing their voice helps a lot.'</p>
+						</div>
+					</div>
+				    </div><!-- /.span3 -->
+	  </div><!-- /.row -->
+
+	</div><!-- /.container -->
+	
+  <!-- START THE FEATURETTES -->
+<div id="bg-color-grey">
+	<div class="container marketing">
+		<div class="section-5">
+		<div class="row">
+		  <div class="featurette">
+		    <h2 class="featurette-heading" id="special-header-blue">Why vCruit and online video can help ...</h2>
+		    <div class="row">
+					<div class="span3">
+			      <%= image_tag "arrows.png", :class => "sec5-image" %>
+						<p class="lead">"Promote a job opportunity"</p>
+			    </div><!-- /.span3 -->
+					<div class="span3">
+			      <%= image_tag "paper.png", :class => "sec5-image" %>
+						<p class="lead">"Send an about me or about us introduction"</p>
+			    </div><!-- /.span3 -->
+					<div class="span3">
+			      <%= image_tag "horn.png", :class => "sec5-image" %>
+						<p class="lead">"Share a market update on social media"</p>
+			    </div><!-- /.span3 -->
+					<div class="span3">
+			      <%= image_tag "mail.png", :class => "sec5-image" %>
+						<p class="lead">"Send a personal message to a candidate or client"</p>
+			    </div><!-- /.span3 -->
+				
+				</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+  <!-- /END THE FEATURETTES -->
+	
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+
+	  <!-- Four columns of text below the carousel -->
+	  <div class="section-6">
+			<div class="row">
+				<h2 class="featurette-heading" id="special-header-blue">Questions?</h2>
+				<p class="lead">How can I make a video? Will vCruit help me? <%= link_to "See the answer here." %></p>
+				<p class="lead">How is vCruit different from YouTube, my website, LinkedIn, Facebook, or Twitter? <%= link_to "See the answer here." %></p>
+			</div>
+		</div>
+
+	</div><!-- /.container -->
+
+
+
+  <!-- START THE FEATURETTES -->
+<div id="bg-color-grey">
+	<div class="container marketing">
+		<div class="section-7">
+		<div class="row">
+		  <%= image_tag "vcruit-logo.png" %>
+      <ul class="footer-links">
+        <li><%= link_to "How It Works",   root_path %></li>
+        <li><%= link_to "Pricing",   about_path %></li>
+        <li><%= link_to "FAQ",   about_path %></li>
+        <li><%= link_to "Contact",   contact_path %></li>
+			</ul>
+			
+		  </div>
+		</div>
+	</div>
+</div>
+
+  <!-- /END THE FEATURETTES -->
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script>
+  !function ($) {
+    $(function(){
+      // carousel demo
+      $('#myCarousel').carousel()
+    })
+  }(window.jQuery)
+</script>
+<script src="../assets/js-holder/holder.js"></script>
+
+
+
