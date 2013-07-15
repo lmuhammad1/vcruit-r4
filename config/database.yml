@@ -3,7 +3,6 @@ development:
   encoding: unicode
   database: vcruit_development
   username: louis
-  password:
   host: localhost
   port: 5432
 
@@ -12,10 +11,9 @@ test:
   encoding: unicode
   database: vcruit_test
   username: louis
-  password:
   host: localhost
   port: 5432
-	
+
 production:
   adapter: postgresql
   database: vcruit_production

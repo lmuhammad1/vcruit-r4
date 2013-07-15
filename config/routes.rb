@@ -7,8 +7,12 @@ Vcruit::Application.routes.draw do
   
 	root :to => 'static_pages#home'	
 
-	get 'about', to: 'static_pages#about', as: 'about'
-	get 'contact', to: 'static_pages#contact', as: 'contact'
+	get 'info', to: 'static_pages#info', as: 'info'
+	get 'pricing', to: 'static_pages#pricing', as: 'pricing'
+	get 'faq', to: 'static_pages#faq', as: 'faq'
+  get 'contact', to: 'static_pages#contact', as: 'contact'
+
+
   get 'welcome', to: 'profiles#welcome', as: 'welcome'
 end
 

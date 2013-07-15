@@ -1,123 +1,8 @@
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "slide-01.jpg" %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Watch a demo</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <button class="btn btn-large btn-primary" href="#">Sign up today</button>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-			<%= image_tag "slide-02.jpg" %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>See how it works.</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <button class="btn btn-large btn-primary" href="#">Learn More</button>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "slide-03.jpg" %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Start for free</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <button class="btn btn-large btn-primary" href="#">Start for free</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div><!-- /.carousel -->
 
-<!-- Action Buttons
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+<%= render 'static_pages/sec2' %>
 
-<!-- <div class="action-buttons">
-	<div class="row">
-			<button class="btn btn-large btn-primary" type="button">Watch a Demo</button>
-			<button class="btn btn-large btn-primary" type="button">Start for Free</button>
-	</div>
-</div> -->
+<%= render 'static_pages/sec3' %>
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
-  <!-- Four columns of text below the carousel -->
-  <div class="section-3">
-		<div class="row">
-			<h2 class="featurette-heading">What is vCruit? <span class="muted">It'll blow your mind.</span></h2>
-			<p class="lead">vCruit is a web-based application that enables recruiters to utilize the power of online video to get and keep the attention of candidates and clients. It's an easy to use application that works like this:</p>
-		</div>
-	</div>
-	<div class="row">
-    <div class="span3">
-      <h2 class="featurette-numbering">1</h2>
-      <p class="lead">Create a video that showcases your message and upload it to the vCruit application.</p>
-    </div><!-- /.span3 -->
-    <div class="span3">
-      <h2 class="featurette-numbering">2</h2>
-      <p class="lead">Host the video on a custom landing page designed and branded just for you.</p>
-    </div><!-- /.span3 -->
-    <div class="span3">
-      <h2 class="featurette-numbering">3</h2>
-      <p class="lead">Embed the video into your emails, InMails, and social media posts.</p>
-    </div><!-- /.span3 -->
-    <div class="span3">
-      <h2 class="featurette-numbering">4</h2>
-      <p class="lead">Track analytics to see who watches the video, how many times, and for how long.</p>
-    </div><!-- /.span3 -->
-  </div><!-- /.row -->
-
-</div><!-- /.container -->
-
-
-  <!-- START THE FEATURETTES -->
-<div id="bg-color-orange">
-	<div class="container marketing">
-		<div class="section-3">
-		<div class="row">
-		  <div class="featurette">
-		    <h2 class="featurette-heading">Does this sound familiar?</h2>
-		    <div class="row">
-					<div class="span5 offset1">
-			      <i class="icon-arrow-right"></i>
-			      <p class="lead">"I would like to have more passive candidates respond to my phone calls, emails, and InMails with interest"</p>
-			    </div><!-- /.span3 -->
-					<div class="span5">
-			      <i class="icon-arrow-right"></i>
-			      <p class="lead">"I would like my LinkedIn and other social media posts to reach a larger audience and generate more inbound leads"</p>
-			    </div><!-- /.span3 -->
-				</div>
-				
-		    <div class="row">
-					<div class="span5 offset1">
-			      <i class="icon-arrow-right"></i>
-			      <p class="lead">"I would like to have more companies respond to my phone calls, emails, and InMails with interest"</p>
-			    </div><!-- /.span3 -->
-					<div class="span5">
-			      <i class="icon-arrow-right"></i>
-			      <p class="lead">"Candidates and clients are busy and they get a lot of messages from recruiters. It's really hard to stand out and get their attention."</p>
-			    </div><!-- /.span3 -->
-				</div>
-				</div>
-		  </div>
-		</div>
-	</div>
-</div>
-
-  <!-- /END THE FEATURETTES -->
 	
 	
 	<!-- Marketing messaging and featurettes
@@ -220,28 +105,6 @@
 		</div>
 
 	</div><!-- /.container -->
-
-
-
-  <!-- START THE FEATURETTES -->
-<div id="bg-color-grey">
-	<div class="container marketing">
-		<div class="section-7">
-		<div class="row">
-		  <%= image_tag "vcruit-logo.png" %>
-      <ul class="footer-links">
-        <li><%= link_to "How It Works",   root_path %></li>
-        <li><%= link_to "Pricing",   about_path %></li>
-        <li><%= link_to "FAQ",   about_path %></li>
-        <li><%= link_to "Contact",   contact_path %></li>
-			</ul>
-			
-		  </div>
-		</div>
-	</div>
-</div>
-
-  <!-- /END THE FEATURETTES -->
 
 
 

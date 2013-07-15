@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sample</title>
+  <title>vCruit</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-		<div class="containter">
-			<div class="row">
-			
-		  <%= render 'layouts/header' %>
-			<% flash.each do |name, msg| %>
-			<%= content_tag :div, msg, id: "flash_#{name}" %>
-			<% end %>
-
-	  	  <%= yield %>
-			
+	<body>
+		<% if current_page?(root_url) %>
+			<%= render 'layouts/header_home' %>
+			<%= render 'static_pages/sec1' %>
+		<% else %>
+			<%= render 'layouts/header_main' %>
+		<% end %>
+		<div class="row">
+			<%= yield %>
+			<%= render 'layouts/footer' %>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
