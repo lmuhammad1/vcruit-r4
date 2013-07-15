@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130710125255) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "profiles", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20130710125255) do
     t.integer  "user_id"
   end
 
-  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -39,8 +42,8 @@ ActiveRecord::Schema.define(version: 20130710125255) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "video_pages", force: true do |t|
     t.string   "name"
@@ -51,6 +54,6 @@ ActiveRecord::Schema.define(version: 20130710125255) do
     t.integer  "profile_id"
   end
 
-  add_index "video_pages", ["profile_id"], name: "index_video_pages_on_profile_id"
+  add_index "video_pages", ["profile_id"], name: "index_video_pages_on_profile_id", using: :btree
 
 end
