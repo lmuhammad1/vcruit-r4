@@ -5,7 +5,7 @@ class VideoPagesController < ApplicationController
   # GET /video_pages
   # GET /video_pages.json
   def index
-    @video_pages = VideoPage.all
+    @video_pages = VideoPage.where(:profile_id => current_user_profile)
   end
 
   # GET /video_pages/1
