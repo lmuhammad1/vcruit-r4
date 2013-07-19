@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130710125255) do
+ActiveRecord::Schema.define(version: 20130717174708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20130710125255) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "linkedin"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
@@ -52,6 +57,10 @@ ActiveRecord::Schema.define(version: 20130710125255) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "profile_id"
+    t.string   "video_title"
+    t.string   "video_code"
+    t.string   "job_description_title"
+    t.text     "job_description"
   end
 
   add_index "video_pages", ["profile_id"], name: "index_video_pages_on_profile_id", using: :btree
