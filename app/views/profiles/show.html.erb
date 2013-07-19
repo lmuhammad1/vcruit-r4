@@ -13,6 +13,26 @@
 		  <strong>Company:</strong>
 		  <%= @profile.company %>
 		</p>
+		<p>
+		  <strong>Email:</strong>
+		  <%= @profile.email %>
+		</p>
+		<p>
+		  <strong>Phone:</strong>
+		  <%= @profile.phone %>
+		</p>
+		<p>
+		  <strong>Facebook Id:</strong>
+		  <%= @profile.facebook %>
+		</p>
+		<p>
+		  <strong>Twitter:</strong>
+		  <%= @profile.twitter %>
+		</p>
+		<p>
+		  <strong>Linkedin:</strong>
+		  <%= @profile.linkedin %>
+		</p>
 		<%= link_to 'Edit', edit_profile_path(@profile) %> |
 		<%= link_to 'Back', profiles_path %>
 	</div>
