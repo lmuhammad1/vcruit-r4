@@ -18,7 +18,7 @@
 		        <td><%= video_page.name %></td>
 		        <td><%= video_page.title %></td>
 		        <td><%= video_page.description %></td>
-		        <td><%= link_to 'Show', video_page %></td>
+		        <td><%= link_to 'Show', video_page, :target => "_blank" %></td>
 		        <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
 		        <td><%= link_to 'Destroy', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		      </tr>

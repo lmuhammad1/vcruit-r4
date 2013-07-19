@@ -1,5 +1,5 @@
 class VideoPagesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, only: [:edit, :update, :destroy]
   before_action :set_video_page, only: [:show, :edit, :update, :destroy]
 
   # GET /video_pages
@@ -11,6 +11,7 @@ class VideoPagesController < ApplicationController
   # GET /video_pages/1
   # GET /video_pages/1.json
   def show
+    render :layout => 'special_layout'
   end
 
   # GET /video_pages/new
@@ -71,6 +72,6 @@ class VideoPagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_page_params
-      params.require(:video_page).permit(:name, :title, :description)
+      params.require(:video_page).permit(:name, :video_title, :video_code, :job_description_title, :job_description)
     end
 end

@@ -1,10 +1,10 @@
+
 <div class='row'>
 	<div class="span8 offset1">	
 		<%= form_for(@video_page) do |f| %>
 		  <% if @video_page.errors.any? %>
 		    <div id="error_explanation">
 		      <h2><%= pluralize(@video_page.errors.count, "error") %> prohibited this video_page from being saved:</h2>
-
 		      <ul>
 		      <% @video_page.errors.full_messages.each do |msg| %>
 		        <li><%= msg %></li>
@@ -12,25 +12,37 @@
 		      </ul>
 		    </div>
 		  <% end %>
+	</div>
+</div>
 
-		  <div class="field">
-		    <%= f.label :name %><br>
-		    <%= f.text_field :name %>
+
+
+        
+		    <%= f.label :name %>
+		    <%= f.text_field :name, :class=>"span12", :placeholder=>"input name of page" %>
+		  <div class="row">
+		    <%= f.label :video_title %>
+		    <%= f.text_field :video_title, :class=>"video-name" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :title %><br>
-		    <%= f.text_field :title %>
+		    <%= f.label :video_code %>
+		    <%= f.text_area :video_code %>
+		  </div>
+      <div class="field">
+		    <%= f.label :job_description_title %>
+		    <%= f.text_area :job_description_title, :id=>"textarea" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :description %><br>
-		    <%= f.text_area :description, class: 'wysihtml5' %>
+		    <%= f.label :job_description %>
+		    <%= f.text_area :job_description, class: 'wysihtml5' %>
 		  </div>
 		  <div class="actions">
 		    <%= f.submit "Create Video page", :class=>'btn btn-primary' %>
 		  </div>
 		<% end %>
-	</div>
-</div>
+    
+
+
 
 <script type="text/javascript">
   $('.wysihtml5').each(function(i, elem) {
