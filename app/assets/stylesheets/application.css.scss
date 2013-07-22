@@ -12,6 +12,7 @@
  *= require bootstrap-wysihtml5
  *= require_tree .
  */
+
 @import "bootstrap";
 @import "font-awesome";
 @import "bootstrap-responsive";
@@ -58,8 +59,11 @@ body {
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   padding: 35px 20px;
-	color:#fff;
-	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	color:#B3B3B3;
+}
+
+.navbar .brand, .navbar .nav > li > a:hover {
+    color: #0F7FD5;
 }
 
 /* Offset the responsive button for proper vertical alignment */
