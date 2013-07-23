@@ -13,22 +13,6 @@
   z-index: 9;
 }
 
-// Remove circles on sliding arrows
-.carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-  background-color: transparent;
-  border: 0;
-  z-index: 10;
-}
-
-// Sets the height of the image in the carousel
-.carousel .item {
-  height: 500px;
-}
-
 // Sets the position, width, and height of the main images in carousel
 .carousel img {
   position: absolute;
@@ -40,11 +24,10 @@
 
 // Controls the caption text
 .carousel-caption {
-  background-color: transparent;
-  position: static;
-  max-width: 550px;
+  background-color: white;
+  position: relative;
+  max-width: 200px;
   padding: 0 20px;
-  margin-top: 200px;
 }
 
 .carousel-caption h1,
@@ -142,9 +125,8 @@
 	background-color: #0E5EA3;
 	font-size: 40px;
 	text-align: center;
-	margin:0 auto;
+	margin:30px auto;
 	float:none;
-  margin-top:30px;
 }
 
 .section-3{
@@ -168,8 +150,8 @@
 }
 
 .section-6{
-	margin-right:80px;
-	margin-left:80px;
+	margin-right:60px;
+	margin-left:60px;
 	padding:50px;
 	text-align: center;
 }
@@ -212,7 +194,7 @@
 .main-caption {
   background-color: transparent;
   position: static;
-  max-width: 550px;
+  max-width: 400px;
   padding: 0 20px;
   margin-top: 200px;
   margin-left: 175px;
@@ -224,6 +206,10 @@
   line-height: 1.25;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+.title-font .lead{
+  font-size: 200%;
 }
 .main-caption .btn {
   margin-top: 20px;
@@ -298,51 +284,51 @@
 }
 
 
-@media (max-width: 767px) {
-
-  .navbar-inner {
-    margin: -20px;
-  }
-
-  .carousel {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .carousel .container {
-
-  }
-  .carousel .item {
-    height: 300px;
-  }
-  .carousel img {
-    height: 300px;
-  }
-  .carousel-caption {
-    width: 65%;
-    padding: 0 70px;
-    margin-top: 100px;
-  }
-  .carousel-caption h1 {
-    font-size: 30px;
-  }
-  .carousel-caption .lead,
-  .carousel-caption .btn {
-    font-size: 18px;
-  }
-
-  .marketing .span4 + .span4 {
-    margin-top: 40px;
-  }
-
-  .featurette-heading {
-    font-size: 30px;
-  }
-  .featurette .lead {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-}
+//@media (max-width: 767px) {
+//
+//  .navbar-inner {
+//    margin: -20px;
+//  }
+//
+//  .carousel {
+//    margin-left: -20px;
+//    margin-right: -20px;
+//  }
+//  .carousel .container {
+//
+//  }
+//  .carousel .item {
+//    height: 300px;
+//  }
+//  .carousel img {
+//    height: 300px;
+//  }
+//  .carousel-caption {
+//    width: 65%;
+//    padding: 0 70px;
+//    margin-top: 100px;
+//  }
+//  .carousel-caption h1 {
+//    font-size: 30px;
+//  }
+//  .carousel-caption .lead,
+//  .carousel-caption .btn {
+//    font-size: 18px;
+//  }
+//
+//  .marketing .span4 + .span4 {
+//    margin-top: 40px;
+//  }
+//
+//  .featurette-heading {
+//    font-size: 30px;
+//  }
+//  .featurette .lead {
+//    font-size: 18px;
+//    line-height: 1.5;
+//  }
+//
+//}
 
 .main-navigation{
 	display:block;
