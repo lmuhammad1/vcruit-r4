@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 gem "bootstrap-wysihtml5-rails", "~> 0.3.1.20"
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
