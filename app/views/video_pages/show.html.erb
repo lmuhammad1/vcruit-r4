@@ -1,46 +1,49 @@
-<div class='wrapper'>
-
-	
-		<article>
-      <h1><%= @video_page.video_title %></h1>
-      <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?controlsVisibleOnLoad=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
-      <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
-     
+<article class="video-show">
+  <header class="video-logo">
+    <%= image_tag(@video_page.profile.logo.url(:small)) %>
+  </header>
+  <section class="video-title">
+    <h1 class="video-title"><%= @video_page.video_title %></h1>
+    <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?controlsVisibleOnLoad=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+  </section>
+  <section class="video-contact-info">
+    <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
+		<p>Phone: <%= @video_page.profile.phone %> / Email: <%= mail_to @video_page.profile.email %></p>
     
-    
-    </article>
-
-		<p>
-		  <%= @video_page.profile.phone %>
-      <%= @video_page.profile.email %>
-		</p>
-    
-	  <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), "#{@video_page.profile.facebook}" %>
-	  <%= link_to image_tag("twitter.png", alt: "Follow us on Twitter", width:"20", height:"20"), "#{@video_page.profile.twitter}" %>
-	  <%= link_to image_tag("linkedin.png", alt: "Visit us at Linkedin", width:"20", height:"20"), "#{@video_page.profile.linkedin}" %> 
-    <div>
-    <a href="#" 
-      onclick="
-        window.open(
-          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-          'facebook-share-dialog', 
-          'width=626,height=436'); 
+    <p>Visit my social media pages at: 
+    <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), "#{@video_page.profile.facebook}", :target => "_blank" %>
+	  <%= link_to image_tag("twitter.png", alt: "Follow us on Twitter", width:"20", height:"20"), "#{@video_page.profile.twitter}", :target => "_blank" %>
+	  <%= link_to image_tag("linkedin.png", alt: "Visit us at Linkedin", width:"20", height:"20"), "#{@video_page.profile.linkedin}", :target => "_blank" %>
+    </p>
+  </section>
+  <section class="video-share">
+    <h3>Share This</h3>
+    <div class="share-buttons"> 
+      
+      <a class="facebook-share" target="_blank" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+        'facebook-share-dialog', 
+        'width=626,height=436'); 
         return false;">
-       <%= image_tag("f_logo.png") %>
-    </a>
-    
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-  </div>
-    
-    <h3><%= @video_page.job_description_title %></h3>
-    <p><%=raw @video_page.job_description %></p>
+         <%= image_tag("f_logo.png") %>
+      </a>
+      &nbsp;<script src="//platform.linkedin.com/in.js" type="text/javascript">
+ lang: en_US
+</script>
+<script type="IN/Share"></script>&nbsp;
+      <a class"twitter-share" targer="_blank" href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+    </div>
+  </section>
+  <section class="video-job-details">
+    <h3 class="video-job-description-title"><%= @video_page.job_description_title %></h3>
+    <p class="video-job-description-text"><%=raw @video_page.job_description %></p>
+  </section>
+  <% if current_user %>
+    <%= link_to 'Edit', video_pages_path %> / <%= link_to 'See All Video Pages', video_page_path%> </br>
+    <%= link_to 'Powered by vCruit', root_path %>
+  <% else %>
+    <%= link_to 'Powered by vCruit', root_path %>
+  <% end %>
 
-		<p>
-		  <strong>Description:</strong>
-		  <%= @video_page.description %>
-		</p>
-
-		<%= link_to 'Powered by vCruit', root_path %>
-	</div>
+</article>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

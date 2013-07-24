@@ -2,3 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.video-show {
+  display: block;
+  padding: 25px 100px 50px 100px;
+}
+
+.video-logo {
+  
+}
+
+.video-title {
+  text-align: center;
+  
+  h1{
+    font-size: 40px;
+  	padding-bottom:25px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+}
+
+.video-contact-info {
+  margin-left: 200px;
+  margin-right: 30px;
+  width: 600px;
+  height: 150px;
+  text-align: left;
+  display: inline-block;
+  float: left;
+  padding: 0px 0px 0px 0px;
+  
+}
+
+.video-share {
+  display: inline-block;
+  width: 250px;
+  height: 150px;
+  margin: 0px 0px 0px 0px;
+}
+
+.facebook-share {
+
+  float: left;
+}
+
+.twitter-share {
+  float:right;
+}
+
+.video-job-details {
+  margin: 0px 100px;
+  h3 {
+    color:#FC8608;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+.video-job-description-title {
+  
+}
+
+.video-job-description-text {
+  display: block;
+  border-style: solid;
+  border-width: thin;
+}

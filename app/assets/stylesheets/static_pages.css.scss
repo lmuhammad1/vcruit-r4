@@ -160,9 +160,11 @@
 }
 
 .section4{
+  
+  
 	background-color: #ECECEC;
   display: block;
-  padding: 150px 0px;
+  padding: 100px 0px;
   text-align: center;
   
   .section4-block {
@@ -170,11 +172,21 @@
     display: inline-block;
     margin: 0;
   }
+  
+  .section4-heading {
+    font-size: 50px;
+  	padding-bottom:30px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color:#0E5EA3;
+    text-align: center;
+  }
 }
 
 .section5{
   display: block;
-  padding: 150px 50px 150px 50px;
+  padding: 100px 50px 100px 50px;
   text-align: center;
 
   .section5-heading {
@@ -183,6 +195,8 @@
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+    color:#0E5EA3;
+    text-align: center;
   }
 
   .section5-block {
