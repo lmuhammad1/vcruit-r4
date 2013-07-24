@@ -11,44 +11,42 @@
 		  <% end %>
 
 		  <div class="field">
-		    <%= f.label :company %><br>
-		    <%= f.text_field :company %>
+		    <%= f.label :company %>
+		    <%= f.text_field :company, :class => "input-field", :placeholder=>"Enter your Company Name" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :logo %>
+		    <%= f.label :Please_upload_your_Company_Logo %>
 		    <%= f.file_field :logo %>
 		  </div>
       <div class="field">
-		    <%= f.label :first_name %><br>
-		    <%= f.text_field :first_name %>
+		    <%= f.label :first_name %>
+		    <%= f.text_field :first_name, :class => "input-field", :placeholder=>"Enter your First Name" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :last_name %><br>
-		    <%= f.text_field :last_name %>
+		    <%= f.label :last_name %>
+		    <%= f.text_field :last_name, :class => "input-field", :placeholder=>"Enter your Last Name" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :phone %><br>
-		    <%= f.text_field :phone %>
+		    <%= f.label :phone %>
+		    <%= f.text_field :phone, :class => "input-field", :placeholder=>"Enter your Phone Number XXX-XXX-XXXX" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :email %><br>
-		    <%= f.text_field :email %>
+		    <%= f.label :email %>
+		    <%= f.text_field :email, :class => "input-field", :placeholder=>"Enter your Email Address" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :facebook %><br>
-		    <%= f.text_field :facebook %>
+		    <%= f.label :facebook %>
+		    <%= f.text_field :facebook, :class => "input-field", :placeholder=>"Enter full link to your Facebook Page" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :twitter %><br>
-		    <%= f.text_field :twitter %>
+		    <%= f.label :twitter %>
+		    <%= f.text_field :twitter, :class => "input-field", :placeholder=>"Enter full link to your Twitter Page" %>
 		  </div>
 		  <div class="field">
-		    <%= f.label :linkedin %><br>
-		    <%= f.text_field :linkedin %>
+		    <%= f.label :linkedin %>
+		    <%= f.text_field :linkedin, :class => "input-field", :placeholder=>"Enter full link to your LinkedIn Page"  %>
 		  </div>
 		  <div class="actions">
-		    <%= f.submit %>
+		    <%= f.submit :class => "btn btn-primary"%>
 		  </div>
 		<% end %>
-	</div>
-</div>

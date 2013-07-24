@@ -1,12 +1,14 @@
 
-	  <h2>Welcome <%= current_user_profile.nil? ? current_user.email : current_user_profile.first_name %>!</h2>
-    <% if current_user_profile.nil? %>
-		  <h2><%= link_to 'Please complete your user profile', new_profile_path(current_user_profile) %> </h2>
-		<% else %>
-		  <h2>What do you want to do?</h2>
-		  <h2><%= link_to 'Create a new page', new_video_page_path %></h2>
-		  <h2><%= link_to 'Manage page', video_pages_path %></h2>
-		  <h2><%= link_to 'See analytics for existing videos', '#' %></h2>
-		<% end %>
+<section class="section-welcome">
+  <h2>Welcome <%= current_user_profile.nil? ? current_user.email : current_user_profile.first_name %>!</h2>
+  <% if current_user_profile.nil? %>
+    <h2><%= link_to 'Click here to complete your user profile.', new_profile_path(current_user_profile) %> </h2>
+  <% else %>
+    <h2>What do you want to do?</h2>
+    <h2><%= link_to 'Create a new page', new_video_page_path %></h2>
+    <h2><%= link_to 'Manage page', video_pages_path %></h2>
+    <h2><%= link_to 'See analytics for existing videos', '#' %></h2>
+  <% end %>
+</section>
 
 

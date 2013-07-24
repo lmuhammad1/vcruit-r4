@@ -1,3 +1,64 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.section-welcome {
+  display: block;
+  padding: 150px 150px 150px 150px;
+  min-height: 500px;
+  
+  h2 {
+  font-size: 44px;
+	padding-bottom:30px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  }
+}
+
+.new-profile {
+  display: block;
+  padding: 50px 150px 50px 150px;
+  min-height: 500px;
+  
+  h1 {
+  font-size: 44px;
+	padding-bottom:30px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  }
+}
+
+.profile-form {
+  display: block;
+  padding: 50px 150px 150px 150px;
+  min-height: 500px;
+  h1 {
+  font-size: 44px;
+	padding-bottom:30px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  }
+  
+}
+
+.field {
+  width: 45%; /*Slightly less than 1/4th of the width*/
+  display: inline-block;
+  padding: 25px 20px 20px 20px;
+}
+
+.text-area{
+  width: 100%; /*Slightly less than 1/4th of the width*/
+  height: 500px;
+}
+
+.profile-show {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 10px 10px 100px;
+  
+}
