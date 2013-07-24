@@ -10,7 +10,7 @@
     <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
 		<p>Phone: <%= @video_page.profile.phone %> / Email: <%= mail_to @video_page.profile.email %></p>
     
-    <p>Visit my social media pages at: 
+    <p>Visit my social media pages at:
     <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), "#{@video_page.profile.facebook}", :target => "_blank" %>
 	  <%= link_to image_tag("twitter.png", alt: "Follow us on Twitter", width:"20", height:"20"), "#{@video_page.profile.twitter}", :target => "_blank" %>
 	  <%= link_to image_tag("linkedin.png", alt: "Visit us at Linkedin", width:"20", height:"20"), "#{@video_page.profile.linkedin}", :target => "_blank" %>
@@ -38,7 +38,7 @@
     <p class="video-job-description-text"><%=raw @video_page.job_description %></p>
   </section>
   <% if current_user %>
-    <%= link_to 'Edit', video_pages_path %> / <%= link_to 'See All Video Pages', video_page_path%> </br>
+    <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'See All Video Pages', video_pages_path%> </br>
     <%= link_to 'Powered by vCruit', root_path %>
   <% else %>
     <%= link_to 'Powered by vCruit', root_path %>
