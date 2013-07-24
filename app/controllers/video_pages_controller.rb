@@ -21,6 +21,12 @@ class VideoPagesController < ApplicationController
 
   # GET /video_pages/1/edit
   def edit
+    @video_pages = VideoPage.where(:profile_id => current_user.profile)
+    if @video_page.profile.user_id == current_user
+      @video_page.update_attributes(params[:video_page])
+    else
+      redirect_to root_path
+    end
   end
 
   # POST /video_pages
@@ -31,6 +37,7 @@ class VideoPagesController < ApplicationController
 
     respond_to do |format|
       if @video_page.save
+        
         format.html { redirect_to @video_page, notice: 'Video page was successfully created.' }
         format.json { render action: 'show', status: :created, location: @video_page }
       else
