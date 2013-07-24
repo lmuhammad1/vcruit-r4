@@ -7,14 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
-		<% if current_page?(root_url) %>
-			<%= render 'layouts/header_home' %>
-		<% else %>
-			<%= render 'layouts/header_main' %>
-		<% end %>
-		<div class="row">
-			<%= yield %>
-			<%= render 'layouts/footer' %>
-		</div>
+    <div class="wrapper">
+      <%= render 'layouts/header' %>
+    	<%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
 	</body>
 </html>

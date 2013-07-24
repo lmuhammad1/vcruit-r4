@@ -2,201 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-
-// Sets the position and index of the carousel container 
-.carousel .container {
+#hero-wrapper{
   position: relative;
-  z-index: 9;
+  width: 1366px;
+  height: 409px;
 }
 
-// Sets the position, width, and height of the main images in carousel
-.carousel img {
+#hero-image {
   position: absolute;
-  top: 0;
   left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
-// Controls the caption text
-.carousel-caption {
-  background-color: white;
-  position: relative;
-  max-width: 200px;
-  padding: 0 20px;
-}
-
-.carousel-caption h1,
-.carousel-caption .lead {
-  margin: 0;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-.carousel-caption .btn {
-  margin-top: 10px;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-
-.container{
-  margin-bottom:50px;
-}
-
-.marketing .span3 {
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .span3 p {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.action-buttons{
-	text-align: center;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-.featurette {
-  padding-top: 30px; /* Vertically center images part 1: add padding above and below text. */
-	padding-bottom:60px;
-  overflow: hidden; /* Vertically center images part 2: clear their floats. */
-}
-.featurette-image {
-  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-}
-
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-  margin-right: 40px;
-}
-.featurette-image.pull-right {
-  margin-left: 40px;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-size: 50px;
-	padding-bottom:30px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-#bg-color-orange{
-	background-color: #FC7F1E;
-	color:#fff;
-}
-
-#bg-color-grey{
-	background-color: #ECECEC;
-	color:#fff;
-}
-
-.section-2{
-	margin-top:170px;
-	margin-bottom:70px;
-	text-align: center;
-  font-size: 30px;
-  line-height: 1.2;
-}
-
-.featurette-numbering {
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
-	border-radius: 200%;
-	color: #fff;
-	background-color: #0E5EA3;
-	font-size: 40px;
-	text-align: center;
-	margin:30px auto;
-	float:none;
-}
-
-.section-3{
-	margin-top:20px;
-	margin-bottom:20px;
-	text-align: center;
-}
-
-.section-4{
-	margin-top:30px;
-	margin-bottom:70;
-	text-align: left;
-}
-
-.section-5{
-	margin-top:30px;
-	padding:50;
-	text-align: center;
-	background-color:#ECECEC;
-	color:#666;
-}
-
-.section-6{
-	margin-right:60px;
-	margin-left:60px;
-	padding:50px;
-	text-align: center;
-}
-
-
-
-
-.section-7{
-	margin:30px;
-	padding:0;
-	text-align: center;
-	background-color:#ECECEC;
-	color:#666;
-
-	ul li{
-		display: inline-block;
-		margin: 30px;
-	}
-
-
-}
-
-
-
-.hero{
-  margin: 125px 0px 0px 0px;
-  position: absolute;
   top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 400px;
 }
 
-.hero-container {
-  position: relative;
-  z-index: 9;
-}
-
-// Controls the caption text
 .main-caption {
+  z-index: 100;
   background-color: transparent;
-  position: static;
+  position: absolute;
   max-width: 400px;
   padding: 0 20px;
-  margin-top: 200px;
+  margin-top: 80px;
   margin-left: 175px;
 }
 
@@ -216,143 +40,161 @@
   margin-right: 30px;
 }
 
-
-.icon-arrow-right {
-	display:inline-block;
-	zoom: 2;
-  -moz-transform: scale(3);  /* Firefox */
-	float:left;
-	margin:0px 10px 20px 20px;
-}
-
-.icon-stop {
-	margin-right:20px;
-}
-
-.sec5-image{
-	margin:50px 30px;
-}
-
-.orange-text{
-  color:#0E5EA3;
-}
-
-#special-header-blue{
-	color:#0E5EA3;
-}
-
-#special-header-orange{
-	color:#FC8608;
-}
-
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (max-width: 979px) {
-
-  .container.navbar-wrapper {
-    margin-bottom: 0;
-    width: auto;
+.section1{
+  display: block;
+  padding: 50px 50px 50px 50px;
+  text-align: center;
+  
+  .section1-tagline{
+    font-size: 30px;
+    margin: 0px 80px;
+    line-height: 1.2;
   }
-  .navbar-inner {
-    border-radius: 0;
-    margin: -20px 0;
+  
+  .section1-heading {
+    font-size: 50px;
+  	padding-bottom:30px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
   }
 
-  .carousel .item {
-    height: 500px;
-  }
-  .carousel img {
-    width: auto;
-    height: 500px;
+
+  .section1-numbering {
+  	width: 60px;
+  	height: 60px;
+  	line-height: 60px;
+  	border-radius: 200%;
+  	color: #fff;
+  	background-color: #0E5EA3;
+  	font-size: 40px;
+  	text-align: center;
+  	margin:30px auto;
+  	float:none;
   }
 
-  .featurette {
-    height: auto;
-    padding: 0;
-  }
-	
-  .featurette-image.pull-left,
-  .featurette-image.pull-right {
-    display: block;
-    float: none;
-    max-width: 40%;
-    margin: 0 auto 20px;
+  .section1-block {
+    width: 20%; /*Slightly less than 1/4th of the width*/ 
+    display: inline-block;
+    padding: 25px 20px 0px 20px;
+    margin: 0;
+    text-align: center;
   }
 }
 
+.section2 {
+	background-color: #FC7F1E;
+	color:#fff;
+  display: block;
+  padding: 50px 0px;
+  text-align: center;
+  
+  .section2-tagline{
+    font-size: 30px;
+    margin: 0px 80px;
+    line-height: 1.2;
+  }
+  
+  .section2-heading {
+    font-size: 50px;
+  	padding-bottom:30px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
 
-//@media (max-width: 767px) {
-//
-//  .navbar-inner {
-//    margin: -20px;
-//  }
-//
-//  .carousel {
-//    margin-left: -20px;
-//    margin-right: -20px;
-//  }
-//  .carousel .container {
-//
-//  }
-//  .carousel .item {
-//    height: 300px;
-//  }
-//  .carousel img {
-//    height: 300px;
-//  }
-//  .carousel-caption {
-//    width: 65%;
-//    padding: 0 70px;
-//    margin-top: 100px;
-//  }
-//  .carousel-caption h1 {
-//    font-size: 30px;
-//  }
-//  .carousel-caption .lead,
-//  .carousel-caption .btn {
-//    font-size: 18px;
-//  }
-//
-//  .marketing .span4 + .span4 {
-//    margin-top: 40px;
-//  }
-//
-//  .featurette-heading {
-//    font-size: 30px;
-//  }
-//  .featurette .lead {
-//    font-size: 18px;
-//    line-height: 1.5;
-//  }
-//
-//}
-
-.main-navigation{
-	display:block;
-	height: 120px;
-	width:100%;
-	//background-color:#333;
-	padding:10px;
-	/* IE10 Consumer Preview */ 
-	background-image: -ms-radial-gradient(center, ellipse farthest-corner, #0B74B3 0%, #005780 100%);
-
-	/* Mozilla Firefox */ 
-	background-image: -moz-radial-gradient(center, ellipse farthest-corner, #0B74B3 0%, #005780 100%);
-
-	/* Opera */ 
-	background-image: -o-radial-gradient(center, ellipse farthest-corner, #0B74B3 0%, #005780 100%);
-
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #0B74B3), color-stop(1, #005780));
-
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #0B74B3 0%, #005780 100%);
-
-	/* W3C Markup, IE10 Release Preview */ 
-	background-image: radial-gradient(ellipse farthest-corner at center, #0B74B3 0%, #005780 100%);
-	
+  .section2-block {
+    width: 38%; /*Slightly less than 1/4th of the width*/ 
+    display: inline-block;
+    padding: 25px 20px 20px 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .icon-arrow-right {
+  	display:inline-block;
+  	zoom: 2;
+    -moz-transform: scale(3);  /* Firefox */
+  	float:left;
+  	margin:0px 10px 20px 20px;
+  }
 }
+
+.section3{
+  display: block;
+  padding: 50px 0px;
+  
+  
+  h2 {
+    color:#FC8608;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  
+  .section3-tagline{
+    font-size: 30px;
+    margin: 0px 80px;
+    line-height: 1.2;
+  }
+  
+  .section3-heading {
+    font-size: 50px;
+  	padding-bottom:30px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color:#0E5EA3;
+    text-align: center;
+  }
+
+  .section3-block {
+    width: 95%; /*Slightly less than 1/4th of the width*/ 
+    display: inline-block;
+    padding: 10px 80px;
+    margin: 0;
+  }
+  
+  .icon-stop {
+  	margin-right:20px;
+  }
+}
+
+.section4{
+	background-color: #ECECEC;
+  display: block;
+  padding: 150px 0px;
+  text-align: center;
+  
+  .section4-block {
+    width: 20%; /*Slightly less than 1/4th of the width*/ 
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.section5{
+  display: block;
+  padding: 150px 50px 150px 50px;
+  text-align: center;
+
+  .section5-heading {
+    font-size: 50px;
+  	padding-bottom:30px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .section1-block {
+    width: 90%; /*Slightly less than 1/4th of the width*/ 
+    display: inline-block;
+    padding: 25px 20px 0px 20px;
+    margin: 0;
+    text-align: center;
+  }
+  #special-header-orange{
+  	color:#FC8608;
+  }
+}
+
 
