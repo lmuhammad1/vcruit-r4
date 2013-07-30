@@ -214,4 +214,23 @@
   }
 }
 
-
+.faq {
+  width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 500px;
+  
+  .faq-questions{
+    width:1000px;
+    margin-left: 200px;
+    margin-bottom: 200px;
+  }
+  
+  .faq-answers{
+    width: 500px;
+    margin: 100px auto 100px auto;
+  }
+  
+  .faq-block{
+    margin: 100px 0px;
+  }
+}

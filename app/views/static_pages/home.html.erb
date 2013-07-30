@@ -5,7 +5,7 @@
       <h1>Improve Results.</h1>
       <p class="lead">Get the attention of more candidates and clients to improve response rates.</p>
       <%= link_to('Watch a Demo', "http://fast.wistia.net/embed/iframe/vcgat5v7j5?autoPlay=true&controlsVisibleOnLoad=true&endVideoBehavior=reset&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=email-twitter-linkedIn-googlePlus-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => 'btn btn-large btn-primary wistia-popover[height=388,width=640]')  %>
-      <%= link_to('Start for Free', new_user_registration_path, :class => 'btn btn-large btn-primary')  %>
+      <%= mail_to('alston@vcruit.net', 'Early Access', :cc => 'vcruitdev@gmail.com', :subject => 'I want early access to vCruit!', :class => 'btn btn-large btn-primary')  %>
     </div>
 </div>
 
@@ -81,7 +81,7 @@
 </section>
 
 <section class="section4">
-  <h2 class="section4-heading">Why vCruit and online video can help . . .</h2>
+  <h2 class="section4-heading">A few ways to use vCruit . . .</h2>
 	<div class="section4-block">
     <%= image_tag "arrows.png", :class => "sec5-image" %>
 		<p class="lead">Promote a job opportunity</p>
@@ -102,7 +102,7 @@
 
 <section class="section5">
 			<h2 class="section5-heading" id="special-header-blue">Questions?</h2>
-			<p class="lead">How can I make a video? Will vCruit help me? <%= link_to "See the answer here.", {}, :id => "special-header-orange" %></p>
+			<p class="lead">How can I make a video? Will vCruit help me? <%= link_to "See the answer here.",  :id => "special-header-orange", :action => "faq",:anchor => "Q1" %></p>
 			<p class="lead">How is vCruit different from YouTube, my website, LinkedIn, Facebook, or Twitter? <%= link_to "See the answer here.", {}, :id => "special-header-orange" %></p>
 </section>
 
