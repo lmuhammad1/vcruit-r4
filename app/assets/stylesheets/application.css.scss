@@ -24,7 +24,8 @@ body {
 }
 
 .wrapper {
-  width: 1366px;
+  width: 100%;
+  min-width: 1366px;
   margin: 0px auto 0px auto;
   background-color: #FFF;
 }
@@ -49,7 +50,7 @@ header {
   float: right;
   display: inline-block;
   padding-top: 60px;
-  padding-right: 150px;
+  padding-right: 200px;
 }
 
 #nav-container {
