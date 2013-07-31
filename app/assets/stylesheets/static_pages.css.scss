@@ -234,3 +234,17 @@
     margin: 100px 0px;
   }
 }
+
+.contact-outer{
+  display: table;
+  width: 100%;
+  height: 500px;
+  
+}
+
+.contact-inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  
+}
