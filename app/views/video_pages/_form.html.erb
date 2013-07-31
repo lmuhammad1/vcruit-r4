@@ -24,11 +24,7 @@
 		    <%= f.label :Enter_wistia_video_identification_number %>
 		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"Enter the Wistia ID for the video" %></br>
 		  </div>
-      <div class="field" id="wistia-upload-widget" style="width: 300px; height: 5px;"></div></br>
-      <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
-      <script>
-      var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052' });
-      </script>
+      
       <div class="field">
 		    <%= f.label :job_description_title %>
 		    <%= f.text_field :job_description_title, :class => "input-field", :placeholder=>"Enter title for job description" %>
