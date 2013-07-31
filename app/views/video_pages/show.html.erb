@@ -1,13 +1,13 @@
 <article class="video-show">
   <header class="video-logo">
-    
+    <%= image_tag(@video_page.profile.logo.url(:small)) %>
   </header>
   <section class="video-title">
     <h1 class="video-title"><%= @video_page.video_title %></h1>
     <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?controlsVisibleOnLoad=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
   </section>
   <section class="video-contact-info">
-    <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
+    <!-- <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3> -->
 		<p>Phone: <%= @video_page.profile.phone %> / Email: <%= mail_to @video_page.profile.email %></p>
     
     <p>Visit my social media pages at:
