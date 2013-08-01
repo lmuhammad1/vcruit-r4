@@ -24,24 +24,31 @@
   }
 }
 
-.video-contact-info {
-  margin-left: 200px;
-  margin-right: 30px;
-  width: 600px;
-  height: 150px;
-  text-align: left;
-  display: inline-block;
-  float: left;
-  padding: 0px 0px 0px 0px;
+.video-details-container {
+  text-align: center;
+  width: 800px;
+  margin: 0px auto;
+  
+  .video-contact-info {
+    width: 400px;
+    height: 150px;
+    text-align: left;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+  
+  }
+  
+  .video-share {
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    margin: 0px 0px 0px 0px;
+    float: right;
+  }
+  
   
 }
 
-.video-share {
-  display: inline-block;
-  width: 250px;
-  height: 150px;
-  margin: 0px 0px 0px 0px;
-}
 
 .facebook-share {
 
