@@ -5,7 +5,7 @@
       <h1 class="main-caption-title">Improve Results.</h1>
       <p class="lead">Get the attention of more candidates and clients to improve response rates.</p>
       <%= link_to('Watch a Demo', "http://fast.wistia.net/embed/iframe/vcgat5v7j5?autoPlay=true&controlsVisibleOnLoad=true&endVideoBehavior=reset&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=email-twitter-linkedIn-googlePlus-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => 'btn btn-large btn-primary wistia-popover[height=388,width=640]')  %>
-      <%= link_to "Start Now", new_user_registration_path, :class => 'btn btn-large btn-primary' %>
+      <%= mail_to('alston@vcruit.net', 'Early Access', :cc => 'vcruitdev@gmail.com', :subject => 'I want early access to vCruit!', :class => 'btn btn-large btn-primary')  %>
     </div>
 </div>
 
