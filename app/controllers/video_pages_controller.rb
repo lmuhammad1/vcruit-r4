@@ -22,7 +22,7 @@ class VideoPagesController < ApplicationController
   # GET /video_pages/1/edit
   def edit
     @video_pages = VideoPage.where(:profile_id => current_user.profile)
-    if @video_page.profile.user_id == current_user.profile
+    if @video_page.profile == current_user.profile
       @video_page.update_attributes(params[:video_page])
     else
       redirect_to root_path
