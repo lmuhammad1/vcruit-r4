@@ -34,6 +34,7 @@ class VideoPagesController < ApplicationController
   def create
     @video_page = VideoPage.new(video_page_params)
     @video_page.profile = current_user_profile
+    @video_page.permalink = SecureRandom.urlsafe_base64(8)
 
     respond_to do |format|
       if @video_page.save
