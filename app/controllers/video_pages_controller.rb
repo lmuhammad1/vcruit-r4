@@ -75,11 +75,11 @@ class VideoPagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_video_page
-      @video_page = VideoPage.find(params[:id])
+      @video_page = VideoPage.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_page_params
-      params.require(:video_page).permit(:name, :video_title, :video_code, :job_description_title, :job_description)
+      params.require(:video_page).permit(:name, :video_title, :video_code, :job_description_title, :job_description, :permalink)
     end
 end

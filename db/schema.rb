@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130723163150) do
+ActiveRecord::Schema.define(version: 20130801232424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20130723163150) do
     t.string   "video_code"
     t.string   "job_description_title"
     t.text     "job_description"
+    t.string   "permalink"
   end
 
   add_index "video_pages", ["profile_id"], name: "index_video_pages_on_profile_id", using: :btree
