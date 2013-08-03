@@ -27,7 +27,12 @@
       <div class="field" id="wistia-upload-widget" style="width: 300px; height: 5px;"></div></br>
       <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
       <script>
-      var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052' });
+      var cb = {
+        'uploadSuccess': function(jsonFile) {
+          $('#video_page_video_code').val(jsonFile.hashed_id);
+        },
+      };
+      var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052', callbacks: cb });
       </script>
       <div class="field">
 		    <%= f.label :job_description_title %>
