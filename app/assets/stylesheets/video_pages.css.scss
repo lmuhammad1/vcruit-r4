@@ -68,7 +68,10 @@
   }
 }
 
-.video-job-description-title {
+#wistia-upload-widget {
+  width: 300px;
+  height: 5px;
+  margin-left: 50px;
   
 }
 
@@ -76,4 +79,25 @@
   display: block;
   border-top-style: solid;
   border-width: thin;
+}
+
+.manage-videos {
+  align: left;
+  
+}
+
+.video-hub-wrapper {
+  display: block;
+  min-height: 500px;
+  align: left;
+  margin-left: 150px;
+  
+  .welcome-message {
+    margin: 20px 0px;
+  }
+  
+  .manage-video-title {
+    color: #FC8608;
+  }
+  
 }

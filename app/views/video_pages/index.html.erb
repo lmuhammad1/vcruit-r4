@@ -1,29 +1,25 @@
-		<table>
-		  <thead>
-		    <tr>
-		      <th>Name</th>
-		      <th>Title</th>
-		      <th>Description</th>
-		      <th></th>
-		      <th></th>
-		      <th></th>
-		    </tr>
-		  </thead>
+<div class="video-hub-wrapper">
+<%= render 'profiles/links' %>
 
-		  <tbody>
+<%= link_to 'Create new video page', new_video_page_path, :class => 'btn btn-primary' %>
+
+<h3 class="manage-video-title">Manage your existing pages</h3>
+
+  
+		  <table class="manage-videos", width="60%">
 		    <% @video_pages.each do |video_page| %>
 		      <tr>
-		        <td><%= video_page.name %></td>
-		        <td><%= video_page.title %></td>
-		        <td><%= video_page.description %></td>
-		        <td><%= link_to 'Show', video_page, :target => "_blank" %></td>
-		        <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
-		        <td><%= link_to 'Destroy', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		        <td width="120"><%= video_page.name %></td>
+		        <td width="10"><%= link_to 'View', video_page, :target => "_blank" %></td>
+		        <td width="10"><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
+		        <td width="10"><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td width="40"><%= link_to 'Get Link', video_page %></td>
+            <td width="80"><%= link_to 'Get Linked Image', video_page %></td>
+            <td width="70"><%= link_to 'See Analytics', video_page %></td>
 		      </tr>
 		    <% end %>
-		  </tbody>
-		</table>
-
+		  </table>
+		
 		<br>
-
-		<%= link_to 'New Video page', new_video_page_path %>
+  </div>
+		

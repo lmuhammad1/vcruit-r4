@@ -1,5 +1,5 @@
-<section class="new-profile">
-  <p id="notice"><%= notice %></p>
+<section class="video-hub-wrapper">
+  <%= render 'links' %>
   <p class="profile-show"><%= image_tag @profile.logo.url(:small)%></p></br>
   <p class="profile-show">
 	  <strong>Full Name:</strong>
@@ -29,10 +29,6 @@
 	  <strong>Linkedin:</strong>
 	  <%= @profile.linkedin %>
 	</p></br>
-	<p class="profile-show">
-	  <%= link_to 'Create a new video page now!' , new_video_page_path %>
-	</p></br>
 
-	<%= link_to 'Edit', edit_profile_path(@profile) %> |
-	<%= link_to 'Back', profiles_path %>
+	<%= link_to 'Edit', edit_profile_path(@profile) %>
 </section>
