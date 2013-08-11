@@ -21,7 +21,7 @@
     <p class="video-job-description-text"><%=raw @video_page.job_description %></p>
   </section>
   <% if current_user_profile %>
-    <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'See All Video Pages', video_pages_path%> </br>
+    <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
     <%= link_to 'Powered by vCruit', root_path %>
   <% else %>
     <%= link_to 'Powered by vCruit', root_path %>

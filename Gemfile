@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 gem "bootstrap-wysihtml5-rails", "~> 0.3.1.20"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "fog", "~> 1.14.0"
 gem "multipart-post", "~> 1.2.0"
 gem 'friendly_id', '~> 5.0.0.alpha1'
 
