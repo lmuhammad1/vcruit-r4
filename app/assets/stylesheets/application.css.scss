@@ -29,13 +29,11 @@ body {
   text-align: center;
   background-color: #FFF;
   position: relative;
-  display: inline-block;
 }
 
 .inner-wrapper{
   margin: 0px auto 0px auto;
   width: 1366px;
-  min-width: 1366px;
   position: static;
   
 }
@@ -77,12 +75,14 @@ body {
   }
 }
 
+.footer-outer {
+  background-color:#ECECEC;
+}
 .main-footer {
 	margin:0px;
 	padding-top: 40px;
   height: 100px;
-	text-align: center;
-	background-color:#ECECEC;  
+	text-align: center;  
 }
 
 .input-field {
