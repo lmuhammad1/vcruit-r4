@@ -19,30 +19,40 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #F8F8FB;
+  min-width: 1366px;
   color: #5a5a5a;
 }
 
-.wrapper {
+.outer-wrapper {
   width: 100%;
-  min-width: 1366px;
   margin: 0px auto 0px auto;
+  text-align: center;
   background-color: #FFF;
+  position: relative;
+  display: inline-block;
 }
 
-header {
-  display: block;
+.inner-wrapper{
+  margin: 0px auto 0px auto;
+  width: 1366px;
+  min-width: 1366px;
+  position: static;
+  
 }
 
 .main-header {
+  display: block;
   height: 120px;
+
+  clear: both;
 }
 
 #main-logo {
   width: 500px;
   float: left;
+  text-align: left;
   display: block;
-  margin: 25px 0px 10px 200px;
+  margin: 25px 0px 0px 100px;
 
 }
 
@@ -50,7 +60,7 @@ header {
   float: right;
   display: inline-block;
   padding-top: 60px;
-  padding-right: 200px;
+  padding-right: 125px;
 }
 
 #nav-container {
