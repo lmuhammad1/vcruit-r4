@@ -12,7 +12,7 @@
 <div class="outer-wrapper video-outer">
   <div class="inner-wrapper">
     <div class="video">
-      <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?autoPlay=true&controlsVisibleOnLoad=true&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=twitter-linkedIn-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="386">
+      <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?autoPlay=true&controlsVisibleOnLoad=true&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=email-twitter-linkedIn-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="386">
       </iframe>
     </div>
     <div class="video-details-container">
@@ -33,7 +33,7 @@
 <div class="outer-wrapper">
   <div class="inner-wrapper">
     <section class="job-description">
-      <h3 class="title"><%= @video_page.job_description_title %></h3>
+      <h3 class="title job-description-title"><%= @video_page.job_description_title %></h3>
       <p><%=raw @video_page.job_description %></p>
     </section>
   </div>
