@@ -1,29 +1,52 @@
-<article class="video-show">
-  <header class="video-logo">
-    <%= image_tag(@video_page.profile.logo.url(:small)) %>
-  </header>
-  <section class="video-title">
-    <h1 class="video-title"><%= @video_page.video_title %></h1>
-    <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?autoPlay=true&controlsVisibleOnLoad=true&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=twitter-linkedIn-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="386"></iframe>
-  <div class="video-details-container">
-    <section class="video-contact-info">
-      <h3>Contact <%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
-  		<p>Phone: <%= @video_page.profile.phone %> / Email: <%= mail_to @video_page.profile.email %></p>
-      <p>Visit my social media pages at:
+<div class="outer-wrapper">
+  <div class="inner-wrapper">
+    <div class="video-logo">
+      <%= image_tag(@video_page.profile.logo.url(:small)) %>
+    </div>
+    <div class="video-title">
+      <h1 class="title video-heading"><%= @video_page.video_title %></h1>
+    </div>
+  </div>
+</div>     
+  
+<div class="outer-wrapper video-outer">
+  <div class="inner-wrapper">
+    <div class="video">
+      <iframe src="http://fast.wistia.net/embed/iframe/<%= @video_page.video_code %> ?autoPlay=true&controlsVisibleOnLoad=true&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=twitter-linkedIn-facebook&plugin%5Bsocialbar-v1%5D%5BtweetText%5D=Check%20out%20this%20video%21&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="386">
+      </iframe>
+    </div>
+    <div class="video-details-container">
+      <h3 class="title">Contact</h3>
+      <hr id="video-bar">
+      <h3 class="title name-heading"><%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
+  		<p class="title description">Phone: <%= @video_page.profile.phone %></p>
+      <p class="title description">Email: <%= mail_to @video_page.profile.email %></p>
+      <p>
       <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), "#{@video_page.profile.facebook}", :target => "_blank" %>
       <%= link_to image_tag("twitter.png", alt: "Follow us on Twitter", width:"20", height:"20"), "#{@video_page.profile.twitter}", :target => "_blank" %>
       <%= link_to image_tag("linkedin.png", alt: "Visit us at Linkedin", width:"20", height:"20"), "#{@video_page.profile.linkedin}", :target => "_blank" %>
       </p>
+    </div>
   </div>
-  </section>
-  <section class="video-job-details">
-    <h3 class="video-job-description-title"><%= @video_page.job_description_title %></h3>
-    <p class="video-job-description-text"><%=raw @video_page.job_description %></p>
-  </section>
-  <% if current_user_profile %>
-    <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
-    <%= link_to 'Powered by vCruit', root_path %>
-  <% else %>
-    <%= link_to 'Powered by vCruit', root_path %>
-  <% end %>
-</article>
+</div>
+
+<div class="outer-wrapper">
+  <div class="inner-wrapper">
+    <section class="job-description">
+      <h3 class="title"><%= @video_page.job_description_title %></h3>
+      <p><%=raw @video_page.job_description %></p>
+    </section>
+  </div>
+</div> 
+    
+<div class="outer-wrapper footer-wrapper">
+  <div class="inner-wrapper links">
+    <% if current_user_profile %>
+      <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
+      <%= link_to 'Powered by vCruit', root_path %>
+    <% else %>
+      <%= link_to 'Powered by vCruit', root_path %>
+    <% end %>
+  </div>
+</div> 
+ 
