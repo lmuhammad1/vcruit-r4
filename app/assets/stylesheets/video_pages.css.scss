@@ -43,7 +43,7 @@
   float: left;
   clear: right;
   display: inline-block;
-  width: 650px;
+  width: 640px;
 }
 
 .video-details-container {
@@ -107,14 +107,14 @@
 .job-description{
   text-align: left;
   font-size: 18px;
-  padding-bottom: 50px;
+  padding: 0px 100px 50px 100px;
   margin-top: 50;
   min-height: 200px;
 }
 
 .job-description-title {
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   font-size: 35px;
 }
 
@@ -129,13 +129,15 @@
 // ======================================
 // video_pages/index.html.erb
 
+.menu-button {
+  margin-left: 100px;
+}
+
 .video-hub {
   display: block;
   text-align: left;
   margin-left: 100px;
 
-  
-  
   .welcome-message {
     display: block;
     margin: 20px 0px;
