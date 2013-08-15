@@ -29,11 +29,13 @@ body {
   text-align: center;
   background-color: #FFF;
   position: relative;
+  display: inline-block;
 }
 
 .inner-wrapper{
   margin: 0px auto 0px auto;
   width: 1366px;
+  min-width: 1366px;
   position: static;
   
 }

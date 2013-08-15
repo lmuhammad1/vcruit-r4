@@ -126,14 +126,20 @@
   text-align: left;
 }
 
-.video-hub-wrapper {
+// ======================================
+// video_pages/index.html.erb
+
+.video-hub {
   display: block;
-  min-height: 500px;
-  align: left;
-  margin-left: 150px;
+  text-align: left;
+  margin-left: 100px;
+
+  
   
   .welcome-message {
+    display: block;
     margin: 20px 0px;
+    align-text: left;
   }
   
   .manage-video-title {

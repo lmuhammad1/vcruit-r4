@@ -1,15 +1,19 @@
-<div class="breadcrumbs-wrapper">
+<div class="breadcrumb-wrapper">
 
 <% if current_user_profile.nil? %>
   <p id="notice"><%= notice %></p>
   <h2>You must complete your user profile to continue</h2>
 <% else %>
   <p id="notice"><%= notice %></p>
-  <ul class="breadcrumbs">
-    <li class="breadcrumbs"><%= link_to "Video Hub",   video_pages_path %></li> | 
-    <li class="breadcrumbs"><%= link_to 'My Profile', profile_path(current_user.profile) %></li> | 
-    <li class="breadcrumbs"><%= link_to "How to Info",   video_pages_path %></li>
-  </ul>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><%= link_to "Video Hub",   video_pages_path %></li>
+        <li><%= link_to 'My Profile', profile_path(current_user.profile) %></li>
+        <li><%= link_to "How to Info",   video_pages_path %></li>
+      </ul>
+    </div>
+  </div>
 <h2 class="welcome-message">Hi <%= current_user_profile.nil? ? current_user.email : current_user_profile.first_name %>!</h2>
  <% end %>
 </div>
