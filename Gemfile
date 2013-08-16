@@ -16,6 +16,8 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem "multipart-post", "~> 1.2.0"
 gem 'friendly_id', '~> 5.0.0.alpha1'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

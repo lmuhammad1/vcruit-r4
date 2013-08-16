@@ -1,34 +1,38 @@
-<section class="video-hub-wrapper">
-  <%= render 'links' %>
-  <p class="profile-show"><%= image_tag @profile.logo.url(:small)%></p></br>
-  <p class="profile-show">
-	  <strong>Full Name:</strong>
-	  <%= @profile.first_name %> <%= @profile.last_name %>
-	</p></br>
-	<p class="profile-show">
-	  <strong>Company:</strong>
-	  <%= @profile.company %>
-	</p></br>
-	<p class="profile-show">
-	  <strong>Email:</strong>
-	  <%= @profile.email %>
-	</p>
-	<p class="profile-show">
-	  <strong>Phone:</strong>
-	  <%= @profile.phone %>
-	</p></br>
-	<p class="profile-show">
-	  <strong>Facebook Id:</strong>
-	  <%= @profile.facebook %>
-	</p></br>
-	<p class="profile-show">
-	  <strong>Twitter:</strong>
-	  <%= @profile.twitter %>
-	</p></br>
-	<p class="profile-show">
-	  <strong>Linkedin:</strong>
-	  <%= @profile.linkedin %>
-	</p></br>
+<div class="outer-wrapper">
+  <div class="inner-wrapper">
+    <section class="video-hub-wrapper">
+      <%= render 'links' %>
+      <p class="profile-show"><%= image_tag @profile.logo.url(:small)%></p></br>
+      <p class="profile-show">
+    	  <strong>Full Name:</strong>
+    	  <%= @profile.first_name %> <%= @profile.last_name %>
+    	</p></br>
+    	<p class="profile-show">
+    	  <strong>Company:</strong>
+    	  <%= @profile.company %>
+    	</p></br>
+    	<p class="profile-show">
+    	  <strong>Email:</strong>
+    	  <%= @profile.email %>
+    	</p>
+    	<p class="profile-show">
+    	  <strong>Phone:</strong>
+    	  <%= @profile.phone %>
+    	</p></br>
+    	<p class="profile-show">
+    	  <strong>Facebook Id:</strong>
+    	  <%= @profile.facebook %>
+    	</p></br>
+    	<p class="profile-show">
+    	  <strong>Twitter:</strong>
+    	  <%= @profile.twitter %>
+    	</p></br>
+    	<p class="profile-show">
+    	  <strong>Linkedin:</strong>
+    	  <%= @profile.linkedin %>
+    	</p></br>
 
-	<%= link_to 'Edit', edit_profile_path(@profile) %>
-</section>
+    	<%= link_to 'Edit', edit_profile_path(@profile) %>
+    </section>
+  </div>
+</div>

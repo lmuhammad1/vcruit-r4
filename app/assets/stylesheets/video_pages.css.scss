@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ======================================
+// video_pages/show.html.erb
 .video-logo {
   text-align: left;
   float: left;
@@ -107,7 +109,7 @@
 .job-description{
   text-align: left;
   font-size: 18px;
-  padding: 0px 100px 50px 100px;
+  padding: 0px 0px 50px 0px;
   margin-top: 50;
   min-height: 200px;
 }
@@ -120,8 +122,10 @@
 
 .footer-wrapper {
   background-color: #ECECEC;
+  border-top:    2px solid  #CCC;
+  padding: 10px 0px 10px 0px;
 }
-
+1
 .links {
   text-align: left;
 }
@@ -129,22 +133,12 @@
 // ======================================
 // video_pages/index.html.erb
 
-.menu-button {
-  margin-left: 100px;
-}
+
 
 .video-hub {
-  display: block;
-  text-align: left;
-  margin-left: 100px;
-
-  .welcome-message {
-    display: block;
-    margin: 20px 0px;
-    align-text: left;
-  }
   
   .manage-video-title {
     color: #FC8608;
+    padding: 20px 0px;
   }
 }

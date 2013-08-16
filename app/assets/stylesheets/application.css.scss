@@ -19,8 +19,9 @@
 body {
   padding: 0;
   margin: 0;
-  min-width: 1366px;
+  min-width: 1200px;
   color: #5a5a5a;
+  height: 100%;
 }
 
 .outer-wrapper {
@@ -34,16 +35,15 @@ body {
 
 .inner-wrapper{
   margin: 0px auto 0px auto;
-  width: 1366px;
-  min-width: 1366px;
+  padding-left: 150px;
+  padding-right: 150px;
+  width: 1200px;
   position: static;
-  
 }
 
 .main-header {
   display: block;
   height: 120px;
-
   clear: both;
 }
 
@@ -52,7 +52,7 @@ body {
   float: left;
   text-align: left;
   display: block;
-  margin: 25px 0px 0px 100px;
+  margin: 25px 0px 0px 0px;
 
 }
 
@@ -60,7 +60,6 @@ body {
   float: right;
   display: inline-block;
   padding-top: 60px;
-  padding-right: 125px;
 }
 
 #nav-container {
@@ -81,10 +80,10 @@ body {
   background-color:#ECECEC;
 }
 .main-footer {
-	margin:0px;
+	margin: 0px;
 	padding-top: 40px;
   height: 100px;
-	text-align: center;  
+	text-align: center;
 }
 
 .input-field {

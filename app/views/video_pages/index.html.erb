@@ -6,10 +6,9 @@
     </div>
       <div class="video-hub">
       <h3 class="manage-video-title">Manage your existing pages</h3>
-    
-
-  
-		  <table class="manage-videos", width="60%">
+      
+      <%= will_paginate @video_pages %>  
+		  <table class="manage-videos table table-striped">
 		    <% @video_pages.each do |video_page| %>
 		      <tr>
 		        <td width="120"><%= video_page.name %></td>
@@ -22,8 +21,8 @@
 		      </tr>
 		    <% end %>
 		  </table>
+      <%= will_paginate @video_pages %>
 		
-		<br>
     </div>
   </div>
 </div> 

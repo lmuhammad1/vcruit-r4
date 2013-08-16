@@ -1,7 +1,20 @@
+  <div id="sticky-footer">
 <div class="outer-wrapper footer-outer">
   <div class="inner-wrapper">
+   
+    
     <footer class="main-footer">
       <%= link_to (image_tag "vcruit-logo-small.png"), root_path %>
     </footer>
   </div>
 </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+      var height_diff = $(window).height() - $('body').height();
+      if ( height_diff > 0 ) {
+          $('#sticky-footer').css( 'margin-top', height_diff );
+      }
+  });
+</script>
