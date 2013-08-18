@@ -11,6 +11,7 @@ Vcruit::Application.routes.draw do
 	get 'pricing', to: 'static_pages#pricing', as: 'pricing'
 	get 'faq', to: 'static_pages#faq', as: 'faq'
   get 'contact', to: 'static_pages#contact', as: 'contact'
+  get 'making_a_video', to: 'static_pages#making_a_video', as: 'making_a_video'
 
 
   get 'welcome', to: 'profiles#welcome', as: 'welcome'
