@@ -23,7 +23,6 @@
 		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"Enter the Wistia ID or click the Upload Media button below" %></br>
 		  </div></br>
       <div class="field" id="wistia-upload-widget"></div></br>
-      <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
       <script>
       var cb = {
         'uploadSuccess': function(jsonFile) {
@@ -44,6 +43,8 @@
 		    <%= f.submit "Create Video page", :class=>'btn btn-primary', :target => "_blank"  %>
 		  </div>
 		<% end %>
+
+
   
 <script type="text/javascript">
   $('.wysihtml5').each(function(i, elem) {
