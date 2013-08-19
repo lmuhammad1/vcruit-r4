@@ -12,32 +12,33 @@
 
       <div class="field">
 		    <%= f.label :Page_name %>
-		    <%= f.text_field :name, :class => "input-field", :placeholder=>"This helps you manage your video page and will not appear publicly)" %>
+		    <%= f.text_field :name, :class => "input-field", :placeholder=>"Helps you manage your pages, not seen publicly" %>
       </div></br>
 		  <div class="field">
 		    <%= f.label :Enter_header_text_for_your_page_here %>
-		    <%= f.text_field :video_title, :class => "input-field", :placeholder=>"e.g. a job title or the title of your post" %>
+		    <%= f.text_field :video_title, :class => "input-field", :placeholder=>"Appears above your video" %>
 		  </div></br>
+      <div class="field" id="wistia-upload-widget">
+        <script>
+        var cb = {
+          'uploadSuccess': function(jsonFile) {
+            $('#video_page_video_code').val(jsonFile.hashed_id);
+          },
+        };
+        var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052', callbacks: cb });
+        </script>
+      </div></br>
 		  <div class="field">
-		    <%= f.label :Enter_wistia_video_identification_number %>
-		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"Enter the Wistia ID or click the Upload Media button below" %></br>
+		    <%= f.label "Enter video identification number (skip if you used the Upload Media button)" %>
+		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"This will populate automatically when you Upload Media" %></br>
 		  </div></br>
-      <div class="field" id="wistia-upload-widget"></div></br>
-      <script>
-      var cb = {
-        'uploadSuccess': function(jsonFile) {
-          $('#video_page_video_code').val(jsonFile.hashed_id);
-        },
-      };
-      var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052', callbacks: cb });
-      </script>
       <div class="field">
-		    <%= f.label :job_description_title %>
-		    <%= f.text_field :job_description_title, :class => "input-field", :placeholder=>"Enter title for job description" %>
+		    <%= f.label :Text_box_title %>
+		    <%= f.text_field :job_description_title, :class => "input-field", :placeholder=>"This appears under the video" %>
 		  </div></br>
 		  <div class="field">
-		    <%= f.label :job_description %>
-		    <%= f.text_area :job_description, class: 'wysihtml5 text-area', :placeholder=>"Enter job description (use buttons above to format text)"%>
+		    <%= f.label :Text_box %>
+		    <%= f.text_area :job_description, class: 'wysihtml5 text-area', :placeholder=>"Enter text here and use buttons above to format text"%>
 		  </div>
 		  <div class="actions">
 		    <%= f.submit "Create Video page", :class=>'btn btn-primary', :target => "_blank"  %>
