@@ -40,13 +40,15 @@
 </div> 
     
 <div class="outer-wrapper footer-wrapper">
-  <div class="inner-wrapper links">
-    <% if current_user_profile %>
-      <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
-      <%= link_to 'Powered by vCruit', root_path %>
-    <% else %>
-      <%= link_to 'Powered by vCruit', root_path %>
-    <% end %>
+  <div class="inner-wrapper">
+    <div class="links">
+      <% if current_user_profile %>
+        <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
+        <%= link_to 'Powered by vCruit', root_path %>
+      <% else %>
+        <%= link_to 'Powered by vCruit', root_path %>
+      <% end %>
+    </div>
   </div>
 </div> 
  
