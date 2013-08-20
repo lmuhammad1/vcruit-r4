@@ -17,7 +17,7 @@
     	</p></br>
     	<p class="profile-show">
     	  <strong>Phone:</strong>
-    	  <%= @profile.phone %>
+    	  <%= number_to_phone(@profile.phone, area_code: true) %>
     	</p></br>
     	<p class="profile-show">
     	  <strong>Facebook:</strong>

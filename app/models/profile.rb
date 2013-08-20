@@ -10,14 +10,9 @@ class Profile < ActiveRecord::Base
   validates :last_name, presence: true, length: { maximum: 50 }
   validates :phone, :numericality => true, 
                     :length => { :minimum => 10, :maximum => 15 }
-                    
-
-  
-  
   
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-                
 
   protected
   def url_check

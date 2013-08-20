@@ -19,7 +19,7 @@
       <h3 class="title">Contact</h3>
       <hr id="video-bar">
       <h3 class="title name-heading"><%= @video_page.profile.first_name %> <%= @video_page.profile.last_name %></h3>
-  		<p class="title description">Phone: <%= @video_page.profile.phone %></p>
+  		<p class="title description">Phone: <%= number_to_phone(@video_page.profile.phone, area_code: true) %></p>
       <p class="title description">Email: <%= mail_to @video_page.profile.email %></p>
       <p>
       <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), "#{@video_page.profile.facebook}", :target => "_blank" %>
