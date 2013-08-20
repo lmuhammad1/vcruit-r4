@@ -16,8 +16,8 @@
 		        <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
 		        <td><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <td><%= request.original_url + "/" + video_page.permalink %></td>
-            <td><%= mail_to('support@vcruit.net', 'Get Image Link', :cc => 'vcruitdev@gmail.com', :subject => "Get Image Link for #{login_name}") %></td>
-            <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name}") %></td>
+            <td><%= mail_to('support@vcruit.net', 'Get Image Link', :cc => 'vcruitdev@gmail.com', :subject => "Get Image Link for #{login_name} on video page id: #{video_page.permalink}") %></td>
+            <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ") %></td>
 		      </tr>
 		    <% end %>
 		  </table>
