@@ -39,16 +39,25 @@
   </div>
 </div> 
     
-<div class="outer-wrapper footer-wrapper">
+<div class="outer-wrapper footer-wrapper" id="sticky-footer">
   <div class="inner-wrapper">
-    <div class="links">
+    <footer class="links">
       <% if current_user_profile %>
         <%= link_to 'Edit', edit_video_page_path %> / <%= link_to 'Video Hub', video_pages_path%> </br>
         <%= link_to 'Powered by vCruit', root_path %>
       <% else %>
         <%= link_to 'Powered by vCruit', root_path %>
       <% end %>
-    </div>
+    </footer>
+    <script>
+      $(document).ready(function() {
+          var height_diff = $(window).height() - $('body').height();
+          if ( height_diff > 0 ) {
+              $('#sticky-footer').css( 'margin-top', height_diff );
+          }
+      });
+    </script>
+    
   </div>
 </div> 
  
