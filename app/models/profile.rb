@@ -9,7 +9,8 @@ class Profile < ActiveRecord::Base
   validates :first_name, presence: true, length: { maximum: 50 }
   validates :last_name, presence: true, length: { maximum: 50 }
   validates :phone, :numericality => true, 
-                    :length => { :minimum => 10, :maximum => 15 }
+                    :length => { :minimum => 10, :maximum => 15 },
+                    :presence => { :message => "You must enter 10 digit phone number -- XXXXXXXXXX"}
   
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
@@ -23,6 +24,5 @@ class Profile < ActiveRecord::Base
       elsif ! self.linkedin.blank? && !(self.linkedin[/^http:\/\//] || self.linkedin[/^https:\/\//])
         self.linkedin = 'http://' + self.linkedin
       end
-      
     end
 end
