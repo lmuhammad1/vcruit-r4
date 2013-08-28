@@ -12,6 +12,7 @@ Vcruit::Application.routes.draw do
 	get 'faq', to: 'static_pages#faq', as: 'faq'
   get 'contact', to: 'static_pages#contact', as: 'contact'
   get 'making_a_video', to: 'static_pages#making_a_video', as: 'making_a_video'
+  get 'help', to: 'static_pages#help', as: 'help'
 
 
   get 'welcome', to: 'profiles#welcome', as: 'welcome'
