@@ -32,6 +32,11 @@
 		    <%= f.label "Enter video identification number (skip if you used the Upload Media button)" %>
 		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"This will populate automatically when you Upload Media" %></br>
 		  </div></br>
+     
+      <div class="field">
+		    <%= f.file_field :thumbnail %>
+		  </div></br>
+      
       <div class="field">
 		    <%= f.label :Text_box_title %>
 		    <%= f.text_field :job_description_title, :class => "input-field", :placeholder=>"This appears under the video" %>

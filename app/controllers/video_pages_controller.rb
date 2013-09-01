@@ -81,6 +81,6 @@ class VideoPagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_page_params
-      params.require(:video_page).permit(:name, :video_title, :video_code, :job_description_title, :job_description, :permalink)
+      params.require(:video_page).permit(:name, :video_title, :video_code, :job_description_title, :job_description, :thumbnail, :permalink)
     end
 end
