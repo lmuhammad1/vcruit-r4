@@ -4,55 +4,54 @@
       <%= render 'profiles/links' %>
       <%= link_to 'Create new video page', new_video_page_path, :class => 'btn btn-primary menu-button' %>
     </div>
-      <div class="video-hub">
+    <div class="video-hub">
       <h3 class="manage-video-title">Manage your existing pages</h3>
-      
-      <%= will_paginate @video_pages %>  
-		  <table class="manage-videos table table-striped">
-		    <% @video_pages.each do |video_page| %>
-		      <tr>
-		        <td><%= video_page.name %></td>
-		        <td><%= link_to 'Preview', video_page %></td>
-		        <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
-		        <td><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" title="Add this item" class="thumbnail" href="#addBookDialog">Get Link</a></td>
-            <td><%= link_to image_tag(video_page.thumbnail.url(:small)), video_page %></td>
-            <td><a data-toggle="modal" data-id="<%= video_page.thumbnail.url(:small) %>" title="Add this item" class="thumbnail" href="#addBookDialog">test</a>
-              <div class="modal hide" id="addBookDialog">
-               <div class="modal-header">
-                  <button class="close" data-dismiss="modal">×</button>
-                  <h3>Copy Link Information</h3>
-                </div>
-                  <div class="modal-body">
-                      <p>some content</p>
-                      <input type="text" name="bookId" id="bookId"/>
-                  </div>
-              </div>
-            
-            
-            
-            
-            
-            </td>
-            <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ") %></td>
-		      </tr>
-		    <% end %>
-		  </table>
+
+      <%= will_paginate @video_pages %>
+      <table class="manage-videos table table-striped">
+        <% @video_pages.each do |video_page| %>
+          <tr>
+          <td><%= video_page.name %></td>
+          <td><%= link_to 'Preview', video_page %></td>
+          <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
+          <td><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" title="Add this item" class="thumbnail" href="#addBookDialog">Get Link</a></td>
+          <td><%= link_to image_tag(video_page.thumbnail.url(:small)), video_page %></td>
+          <td><a data-toggle="modal" data-id="<%= video_page.thumbnail.url(:small) %>" title="Add this item" class="thumbnail" href="#addBookDialog">test</a>
+          </td>
+          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ") %></td>
+        </tr>
+      <% end %>
+      </table>
       <%= will_paginate @video_pages %>
     </div>
   </div>
 </div>
 
 
+<div class="modal hide" id="addBookDialog">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Copy Link Information</h3>
+  </div>
+  <div class="modal-body">
+    <p>some content</p>
+    <input type="text" name="bookId" id="bookId" style="width: 400px;" readonly/>
+    <img id="thumbnailUrl" src=""/>
+  </div>
+</div>
 
 
 <script>
 
 $(document).on("click", ".thumbnail", function () {
-     var myThumbnail = $(this).data('id');
-     $(".modal-body #bookId").val( myThumbnail );
-     // As pointed out in comments, 
-     // it is superfluous to have to manually call the modal.
-     // $('#addBookDialog').modal('show');
+  var page_url = $(this).data('id');
+  $(".modal-body #bookId").val( page_url );
+
+  var thumbnail_url = $(this).data('thumbnail-url');
+  $(".modal-body #thumbnailUrl").attr("src", thumbnail_url)
+  // As pointed out in comments,
+  // it is superfluous to have to manually call the modal.
+  // $('#addBookDialog').modal('show');
 });
 </script>
