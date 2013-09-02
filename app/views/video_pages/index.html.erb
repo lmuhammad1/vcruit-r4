@@ -15,9 +15,7 @@
           <td><%= link_to 'Preview', video_page %></td>
           <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
           <td><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" title="Add this item" class="thumbnail" href="#addBookDialog">Get Link</a></td>
-          <td><%= link_to image_tag(video_page.thumbnail.url(:small)), video_page %></td>
-          <td><a data-toggle="modal" data-id="<%= video_page.thumbnail.url(:small) %>" title="Add this item" class="thumbnail" href="#addBookDialog">test</a>
+          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" title="Add this item" class="thumbnail" href="#addBookDialog">Get Link</a>
           </td>
           <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ") %></td>
         </tr>
@@ -28,28 +26,41 @@
   </div>
 </div>
 
-
-<div class="modal hide" id="addBookDialog">
+<div class="modal hide fade" id="addBookDialog">
   <div class="modal-header">
     <button class="close" data-dismiss="modal">×</button>
     <h3>Copy Link Information</h3>
   </div>
   <div class="modal-body">
-    <p>some content</p>
-    <input type="text" name="bookId" id="bookId" style="width: 400px;" readonly/>
-    <img id="thumbnailUrl" src=""/>
+    <p>Click a button below to copy the link or linked imaged to embed in your outbound communications</p>
+    <input type="text" name="bookId" id="full-web-address" style="width: 400px;" readonly/>
+    <!-- <img id="thumbnailUrl" src=""/> -->
+    <a id="embedded-url" href="">
+      <img id="thumbnailUrl" src=""/>
+    </a>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Copy link</a>
+    <a href="#" class="btn btn-primary">Copy image</a>
   </div>
 </div>
+
 
 
 <script>
 
 $(document).on("click", ".thumbnail", function () {
   var page_url = $(this).data('id');
-  $(".modal-body #bookId").val( page_url );
+  $(".modal-body #full-web-address").val( page_url );
+  $(".modal-body #embedded-url").attr("href", page_url);
 
   var thumbnail_url = $(this).data('thumbnail-url');
   $(".modal-body #thumbnailUrl").attr("src", thumbnail_url)
+  
+  
+  
+  
   // As pointed out in comments,
   // it is superfluous to have to manually call the modal.
   // $('#addBookDialog').modal('show');
