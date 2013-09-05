@@ -12,12 +12,12 @@
         <% @video_pages.each do |video_page| %>
           <tr>
           <td><%= video_page.name %></td>
-          <td><%= link_to 'Preview', video_page %></td>
-          <td><%= link_to 'Edit', edit_video_page_path(video_page) %></td>
-          <td><%= link_to 'Delete', video_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" class="thumbnail" href="#addBookDialog">Get Link</a>
+          <td><%= link_to 'Preview', video_page, :class => "btn btn-success" %></td>
+          <td><%= link_to 'Edit', edit_video_page_path(video_page), :class => "btn btn-warning" %></td>
+          <td><%= link_to 'Delete', video_page, :class => "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" class="thumbnail btn btn-inverse" href="#addBookDialog">Get Link</a>
           </td>
-          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ") %></td>
+          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ", :class => "btn") %></td>
         </tr>
       <% end %>
       </table>
@@ -32,14 +32,17 @@
     <h3>Copy Links</h3>
   </div>
   <div class="modal-body">
-    <p>Click a button below to copy the link, linked text or linked image and then paste it into your messages. Once clicked on, these links will launch your video landing page.</p>
-    <h4>Copy Link</h4>
+    <p>Highlight and copy the URL Link, Linked Text or Linked Image and then paste it into your messages. Once clicked on, these links will launch your video landing page.</p>
+    <hr>
+    <h4>URL Link</h4>
     <p>Use a link for LinkedIn, Twitter, and Facebook messages because these apps disable linked text and images.</p>
     <input type="text" name="bookId" id="full-web-address" style="width: 400px;" readonly/></br>
+    <hr>
     <!-- <img id="thumbnailUrl" src=""/> -->
     <h4>Linked Text</h4>
     <p>Use in email along with a linked image. Recommend pasting above or below image.</p>
     <a id="watch-video" href="">Watch Video</a></br>
+    <hr>
     <h4>Linked Image</h4>
     <p>Use in email, but include linked text also in case recipient's email disables images.</p>
     <a id="embedded-url" href="">
@@ -48,9 +51,7 @@
     
   </div>
   <div class="modal-footer">
-    <a href="#" class="btn">Close</a>
-    <a href="#" class="btn btn-primary">Copy link</a>
-    <a href="#" class="btn btn-primary">Copy image</a>
+    <a href="#" data-dismiss="modal" data-target="#myModal" class="btn">Close</a>
   </div>
 </div>
 
