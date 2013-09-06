@@ -17,7 +17,7 @@
           <td><%= link_to 'Delete', video_page, :class => "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" class="thumbnail btn btn-inverse" href="#addBookDialog">Get Link</a>
           </td>
-          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name} on video page id: #{video_page.permalink} ", :class => "btn") %></td>
+          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name}: Video Page Id - #{video_page.permalink} / Video Id - #{video_page.video_code}.", :class => "btn") %></td>
         </tr>
       <% end %>
       </table>
