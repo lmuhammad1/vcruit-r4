@@ -9,43 +9,51 @@
 		      </ul>
 		    </div>
 		  <% end %>
-
-      <div class="field">
-		    <%= f.label :Page_name %>
-		    <%= f.text_field :name, :class => "input-field", :placeholder=>"Helps you manage your pages, not seen publicly" %>
-      </div></br>
-		  <div class="field">
-		    <%= f.label :Enter_header_text_for_your_page_here %>
-		    <%= f.text_field :video_title, :class => "input-field", :placeholder=>"Appears above your video" %>
-		  </div></br>
-      <div class="field" id="wistia-upload-widget">
-        <script>
-        var cb = {
-          'uploadSuccess': function(jsonFile) {
-            $('#video_page_video_code').val(jsonFile.hashed_id);
-          },
-        };
-        var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052', callbacks: cb });
-        </script>
-      </div></br>
-		  <div class="field">
-		    <%= f.label "Enter video identification number (skip if you used the Upload Media button)" %>
-		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"This will populate automatically when you Upload Media" %></br>
-		  </div></br>
-     
-      <div class="field">
-        <%= f.label "Upload thumbnail image for video" %>
-		    <%= f.file_field :thumbnail %>
-		  </div></br>
       
+      <fieldset>
+        <legend>Page Name</legend>
+        <div class="field">
+  		    <%= f.label "Page Name (helps you manage your pages, not seen publicly)" %>
+  		    <%= f.text_field :name, :class => "input-field" %>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Video Information</legend>
+  		  <div class="field">
+  		    <%= f.label "Enter Header Text (appears above your video)" %>
+  		    <%= f.text_field :video_title, :class => "input-field" %>
+  		  </div>
+        <div class="field" id="wistia-upload-widget">
+          <script>
+          var cb = {
+            'uploadSuccess': function(jsonFile) {
+              $('#video_page_video_code').val(jsonFile.hashed_id);
+            },
+          };
+          var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: 'be88ta8052', callbacks: cb });
+          </script>
+        </div>
+  		  <div class="field">
+  		    <%= f.label "Enter video identification number (skip if you used the Upload Media button)" %>
+  		    <%= f.text_field :video_code, :class => "input-field", :placeholder=>"This will populate automatically when you Upload Media" %>
+  		  </div>
+        <div class="field">
+          <%= f.label "Upload thumbnail image for video" %>
+  		    <%= f.file_field :thumbnail %>
+  		  </div>
+      </fieldset>
+      
+      <fieldset>
+      <legend>Text Box Information</legend>
       <div class="field">
-		    <%= f.label :Text_box_title %>
-		    <%= f.text_field :job_description_title, :class => "input-field", :placeholder=>"This appears under the video" %>
+		    <%= f.label "Text Box Title (appears below your video)" %>
+		    <%= f.text_field :job_description_title, :class => "input-field" %>
 		  </div></br>
 		  <div class="field">
 		    <%= f.label :Text_box %>
 		    <%= f.text_area :job_description, class: 'wysihtml5 text-area', :placeholder=>"Enter text here and use buttons above to format text"%>
 		  </div>
+    </fieldset>
 		  <div class="actions">
 		    <%= f.submit "Create Video page", :class=>'btn btn-primary', :target => "_blank"  %>
 		  </div>
