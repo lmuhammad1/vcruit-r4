@@ -12,12 +12,12 @@
         <% @video_pages.each do |video_page| %>
           <tr>
           <td><%= video_page.name %></td>
-          <td><%= link_to 'Preview', video_page, :class => "btn btn-success" %></td>
-          <td><%= link_to 'Edit', edit_video_page_path(video_page), :class => "btn btn-warning" %></td>
-          <td><%= link_to 'Delete', video_page, :class => "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" class="thumbnail btn btn-inverse" href="#addBookDialog">Get Link</a>
+          <td><%= link_to 'Preview', video_page, :class => "btn btn-link" %></td>
+          <td><%= link_to 'Edit', edit_video_page_path(video_page), :class => "btn btn-link" %></td>
+          <td><%= link_to 'Delete', video_page, :class => "btn btn-link",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><a data-toggle="modal" data-id="<%= request.original_url + "/" + video_page.permalink %>" data-thumbnail-url="<%= video_page.thumbnail.url(:medium) %>" class="image_thumb btn btn-link" href="#addBookDialog">Get Link</a>
           </td>
-          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name}: Video Page Id - #{video_page.permalink} / Video Id - #{video_page.video_code}.", :class => "btn") %></td>
+          <td><%= mail_to('support@vcruit.net', 'Get Analytics', :cc => 'vcruitdev@gmail.com', :subject => "Get Analytics for #{login_name}: Video Page Id - #{video_page.permalink} / Video Id - #{video_page.video_code}.", :class => "btn btn-link") %></td>
         </tr>
       <% end %>
       </table>
@@ -59,7 +59,7 @@
 
 <script>
 
-$(document).on("click", ".thumbnail", function () {
+$(document).on("click", ".image_thumb", function () {
   var page_url = $(this).data('id');
   $(".modal-body #full-web-address").val( page_url );
   $(".modal-body #embedded-url").attr("href", page_url);
